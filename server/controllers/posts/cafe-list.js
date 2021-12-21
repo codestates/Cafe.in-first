@@ -18,11 +18,9 @@ module.exports = async (req, res) => {
     include: [
       {
         model: dislikes_hash_tag,
-        attributes: { exclude: "id" },
       },
       {
         model: likes_hash_tag,
-        attributes: { exclude: "id" },
       },
     ],
   });

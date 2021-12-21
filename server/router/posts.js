@@ -4,6 +4,8 @@ const controllers = require("../controllers");
 
 router.get("/cafe-list", controllers.cafe_list);
 
+router.get("/dummycafe-list", controllers.dummycafe_list);
+
 router.get("/cafe-list/:id", controllers.cafe_list_likehash);
 
 router.get("/cafe-info/:id", controllers.cafe_info);

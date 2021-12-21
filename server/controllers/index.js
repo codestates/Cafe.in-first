@@ -6,6 +6,7 @@ module.exports = {
   mypage: require("./users/mypage"),
   changePassword: require("./users/mypage/password"),
   cafe_list: require("./posts/cafe-list"),
+  dummycafe_list: require("./posts/dummycafe_list"),
   cafe_info: require("./posts/cafe-info"),
   like_hashtag: require("./posts/like-hashtag"),
   dislike_hashtag: require("./posts/dislike-hashtag"),
