@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
   const cafeInfo = await post.findOne({
     where: { id: req.params.id },
   });
-  const hashes = await cafeInfo.getLikesHash();
+  const hashes = await cafeInfo.getLikes_hash_tags();
   const disHashes = await cafeInfo.getDislikes_hash_tags();
 
   //const dislikeHash = await cafeInfo.getDislikes_hash_tag();

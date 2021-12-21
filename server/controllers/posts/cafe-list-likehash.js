@@ -18,7 +18,6 @@ module.exports = async (req, res) => {
     include: [
       {
         model: likes_hash_tag,
-        as: "LikesHash",
         where: { id: req.params.id },
         attributes: { exclude: "id" },
       },
