@@ -34,6 +34,7 @@ export const NavLogo = styled(Link)`
 `;
 
 export const NavIcon = styled(FaMugHot)`
+
   margin-right: 0.9em;
 `;
 
@@ -48,8 +49,7 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 90vh;
+  
     position: absolute;
     top: 80px;
     left: ${({ click }) => (click ? 0 : '-100%')};
