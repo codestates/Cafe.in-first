@@ -47,6 +47,14 @@ const LoginForm = ({ handleLogin }) => {
     // )
     // .then((data) => {handleLogin(loginInfo)})
     // .catch(err => console.log(err));
+
+    axios.post(
+      'http://localhost:8080/users/sign-in',
+      { user_email: email, password: password },
+      { 'Content-Type': 'application/json', withCredentials: true }
+    )
+      .then((res) => console.log(res.body))
+      .catch((err) => console.log(err.response.data.message))
   };
 
   return (

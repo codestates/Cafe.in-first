@@ -8,7 +8,9 @@ module.exports = {
         return regEmail.test(email)
     },
     registerPW1: (password) => {
-        const regPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/
+        // const regPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/
+        // 클라이언트 정규식
+        const regPassword = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{6,}$/
         return regPassword.test(password)
     },
     registerPW2: (password) => {

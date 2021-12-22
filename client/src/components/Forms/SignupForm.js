@@ -53,6 +53,23 @@ const SignupForm = ({ handleSignup }) => {
     // )
     // .then((data) => {handleLogin(loginInfo)})
     // .catch(err => console.log(err));
+
+
+    // 123qwe!!
+    axios.post(
+      'http://localhost:8080/users/sign-up',
+      { user_email: email, password: password, nickname: nickname },
+      { 'Content-Type': 'application/json', withCredentials: true }
+    )
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err.response.data.message))
+
+    // ========================================
+    // axios({
+    //   method: 'POST',
+    //   url: 'http://localhost:8080/users/sign-up',
+      
+    // })
   };
 
   return (
