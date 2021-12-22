@@ -33,5 +33,16 @@ module.exports = class user extends Sequelize.Model {
     );
   }
 
-  static associate(db) {}
+  static associate(db) {
+    db.user.belongsToMany(db.likes_hash_tag, {
+      through: "Like",
+      foreignKey: "userId",
+      sourceKey: "id",
+    });
+    db.user.belongsToMany(db.dislikes_hash_tag, {
+      through: "DisLike",
+      foreignKey: "userId",
+      sourceKey: "id",
+    });
+  }
 };

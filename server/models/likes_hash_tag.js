@@ -36,5 +36,10 @@ module.exports = class likes_hash_tag extends Sequelize.Model {
       foreignKey: "dummy_tag_id",
       sourceKey: "id",
     });
+    db.likes_hash_tag.belongsToMany(db.user, {
+      through: "Like",
+      foreignKey: "userId",
+      sourceKey: "id",
+    });
   }
 };
