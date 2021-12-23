@@ -23,6 +23,10 @@ function App() {
     console.log('Signup Success', signupInfo);
   }
 
+  // const handleLogoutSuccess = () => {
+  //   setIsLogin(false);
+  //   setLoginInfo(null);
+  // }
 
   return (
     <Router>
@@ -41,7 +45,7 @@ function App() {
         : <Route path='/' exact component={Home} /> }
         <Route
           path="/mypage"
-          render={props => <MyPage loginInfo={loginInfo} {...props} />}
+          render={props => <MyPage setIsLogin={setIsLogin} loginInfo={loginInfo} {...props} />}
         />
       </Switch>
 

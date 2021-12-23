@@ -2,10 +2,10 @@ import React from 'react';
 import { MypageSection} from '../../components';
 import { mypageObjOne } from './Data';
 
-function Mypage({loginInfo}) {
+function Mypage({setIsLogin, loginInfo}) {
   return (
     <>
-      <MypageSection loginInfo={loginInfo} {...mypageObjOne} />
+      <MypageSection setIsLogin={setIsLogin} loginInfo={loginInfo} {...mypageObjOne} />
     </>
   );
 }
