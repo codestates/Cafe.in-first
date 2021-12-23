@@ -22,7 +22,7 @@ import {
 } from './MypageSection.elements';
 
 const MypageSection =  (
-  { loginInfo, 
+  { setIsLogin, loginInfo, 
   lightBg,
   lightTopLine,
   lightText,
@@ -83,7 +83,7 @@ const MypageSection =  (
             showModal={showModal}
             setShowModal={setShowModal}
             // isLogin={isLogin}
-            // setIsLogin={setIsLogin}
+            setIsLogin={setIsLogin}
           />
 
     </IconContext.Provider >

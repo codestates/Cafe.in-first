@@ -40,9 +40,8 @@ const DeleteAccountForm = ({ handleLogout, setShowModal }) => {
       { password: password },
       { 'Content-Type': 'application/json', withCredentials: true }
     )
-      .then(function(res) {
-        setIsLogout(true)
-        handleLogout(isLogout)
+      .then((res) => {
+        handleLogout(true);
         history.push('/')
       })
       .catch((err) => {
